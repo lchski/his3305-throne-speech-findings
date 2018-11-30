@@ -1,0 +1,12 @@
+---
+layout: page
+title: "Topics"
+---
+
+<ol>
+    {% for topic in site.data.topics %}
+    <li>
+        {{ topic.label }}
+    </li>
+    {% endfor %}
+</ul>
