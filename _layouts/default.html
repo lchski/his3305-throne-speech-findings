@@ -7,6 +7,8 @@
 	{% assign page_title = page.title %}
 	{% if page.url != '/' %}
 		{% assign page_title = page_title | append: ' – Who discusses what, when?' %}
+	{% else %}
+		{% assign page_title = 'Who discusses what, when?' %}
 	{% endif %}
 
     <title>{{ page_title }}</title>
