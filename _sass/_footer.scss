@@ -1,0 +1,17 @@
+footer {
+    font-family: $ff-sans-serif;
+    font-size: $fz-6;
+    
+    background: $purple-dark;
+    color: rgba(255, 255, 255, 0.9);
+
+    padding: 1rem;
+}
+
+    footer a {
+        color: $yellow;
+    }
+
+        footer a:hover {
+            text-decoration-style: double;
+        }
