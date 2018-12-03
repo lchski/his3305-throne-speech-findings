@@ -1,0 +1,36 @@
+.page-header {
+    font-family: $ff-sans-serif;
+    font-size: $fz-6;
+    
+    background: $purple-dark;
+    color: rgba(255, 255, 255, 0.9);
+
+    padding: 1rem;
+
+    @media screen and (min-width: 30rem) {
+        max-width: 34rem;
+
+        border-left: 1rem solid $purple-light;
+    }
+}
+
+    .project-title {
+        color: $yellow;
+
+        font-size: $fz-2;
+    }
+
+    .project-subtitle {
+        font-size: $fz-4;
+
+        font-style: italic;
+    }
+
+    .page-header a {
+        color: $yellow;
+
+        margin-right: 1rem;
+    }
+        .page-header a:hover {
+            text-decoration-style: double;
+        }

@@ -1,4 +1,4 @@
-footer {
+.page-footer {
     font-family: $ff-sans-serif;
     font-size: $fz-6;
     
@@ -14,10 +14,10 @@ footer {
     }
 }
 
-    footer a {
+    .page-footer a {
         color: $yellow;
     }
 
-        footer a:hover {
+        .page-footer a:hover {
             text-decoration-style: double;
         }

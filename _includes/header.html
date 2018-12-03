@@ -1,4 +1,13 @@
-<header>
+<header class="page-header">
+    {% case page.url %}
+        {% when '/' %}
+            <h1 class="project-title">{{ site.title }}</h1>
+        {% else %}
+            <p class="project-title">{{ site.title }}</p>
+    {% endcase %}
+
+    <p class="project-subtitle">{{ site.subtitle }}</p>
+
     <nav>
         <a href="/">Home</a>
         <a href="/about/">About</a>
