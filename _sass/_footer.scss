@@ -6,6 +6,10 @@ footer {
     color: rgba(255, 255, 255, 0.9);
 
     padding: 1rem;
+
+    @media screen and (min-width: 30rem) {
+        max-width: 34rem;
+    }
 }
 
     footer a {
