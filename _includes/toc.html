@@ -1,0 +1,15 @@
+<nav class="page-toc">
+    <h2>Project table of contents</h2>
+
+    <p>Feeling lost? Use this table of contents </p>
+
+    <ol>
+        {% for toc_item in site.data.toc %}
+            {% if toc_item.path == page.path %}
+                <li>{{ toc_item.label }}</li>
+            {% else %}
+                <li><a href="{{ toc_item.url }}">{{ toc_item.label }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</nav>
