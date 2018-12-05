@@ -1,5 +1,11 @@
 body {
+    font-family: $ff-sans-serif;
+
     @media screen and (min-width: 30rem) {
         // padding-left: 1rem;
     }
+}
+
+main {
+    padding: 1rem;
 }

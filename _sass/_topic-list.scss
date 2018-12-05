@@ -1,7 +1,49 @@
 .topic-list {
-    padding-left: 2rem;
+    padding-left: 0;
+
+    list-style: none;
+    counter-reset: topics-counter;
 }
+
+    .topic-list li {
+        counter-increment: topics-counter;
+
+        padding: 0 1rem 1rem;
+
+        background: $off-white;
+
+        border: 0.5rem solid $purple-light;
+        // border-left: 0.5rem solid $purple-light;
+
+        margin-top: 1rem;
+    }
+
+        .topic-list li:before {
+            content: counter(topics-counter);
+
+            background: $purple-light;
+            color: rgba(255, 255, 255, 0.9);
+
+            padding: 0.85rem 1.15rem;
+            margin-right: 0.5rem;
+
+            margin-left: -1rem;
+
+            display: inline-block;
+
+            font-size: $fz-3;
+        }
+
+    .topic-list .topic-label {
+        display: inline-block;
+
+        font-weight: normal;
+
+        margin-top: 0;
+    }
 
     .topic-list .topic-images {
         display: flex;
+
+        padding: 1rem;
     }

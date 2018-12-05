@@ -6,24 +6,24 @@ title: "Topics"
 <ol class="topic-list">
     {% for topic in site.data.topics %}
         {% assign topic_id = topic.id | plus: 0 %}
-        {% assign topic_annotation_url = 0 %}
+        {% assign topic_annotation = 0 %}
 
         {% for topic_annotation in site.topic_annotations %}
             {% if topic_id == topic_annotation.topic_number %}
-                {% assign topic_annotation_url = topic_annotation.url %}
+                {% assign topic_annotation = topic_annotation %}
             {% endif %}
         {% endfor %}
 
-        <li>
-            <h2>{{ topic.label }}</h2>
+        <li id="topic-{{ topic_id }}">
+            <h2 class="topic-label">{{ topic.label }}</h2>
 
             <div class="topic-images">
                 <img src="/assets/img/topics/{{ topic_id }}-top-words.png">
                 <img src="/assets/img/topics/{{ topic_id }}-topic-weights.png">
             </div>
 
-            {% if topic_annotation_url != 0 %}
-                <a href="{{ topic_annotation_url }}">(annotation)</a>
+            {% if topic_annotation != 0 %}
+                <a href="{{ topic_annotation.url }}">(annotation)</a>
             {% endif %}
         </li>
     {% endfor %}
