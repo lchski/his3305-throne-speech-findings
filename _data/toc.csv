@@ -1,6 +1,5 @@
 path,url,label
-background.md,/background/,"Background"
-methodology.md,/methodology/,"Methodology"
+background-methodology.md,/background-methodology/,"Background and methodology"
 topics.html,/topics/,"Results (topics)"
 discussion.md,/discussion/,"Discussion of results"
 conclusions.md,/conclusions/,"Conclusions, project implications, next steps"
