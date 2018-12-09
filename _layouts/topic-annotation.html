@@ -1,5 +1,13 @@
 ---
 layout: page
+full_width: true
 ---
 
-{{ content }}
+<div class="topic-images">
+    <img src="/assets/img/topics/{{ page.topic_number }}-top-words.png">
+    <img src="/assets/img/topics/{{ page.topic_number }}-topic-weights.png">
+</div>
+
+<div class="page">
+    {{ content }}
+</div>

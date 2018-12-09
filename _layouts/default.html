@@ -44,7 +44,7 @@
 
 	{% include toc.html %}
 
-	{% if page.full_width %}
+	{% if layout.full_width or page.full_width %}
 		<main class="page--full-width">
 				{{ content }}
 		</main>
