@@ -42,9 +42,15 @@
 <body>
 	{% include header.html %}
 
-	<main>
-    	{{ content }}
-	</main>
+	{% if page.full_width %}
+		<main class="page--full-width">
+				{{ content }}
+		</main>
+	{% else %}
+		<main>
+			{{ content }}
+		</main>
+	{% endif %}
 
 	{% include toc.html %}
 

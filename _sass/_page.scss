@@ -14,6 +14,10 @@ main {
     line-height: 1.4;
 }
 
+    main.page--full-width {
+        max-width: 100%;
+    }
+
 .page-toc {
     padding: 1rem;
 
