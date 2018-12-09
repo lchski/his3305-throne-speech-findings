@@ -21,7 +21,43 @@ main {
     }
 
 .page-toc {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
 
     background: $off-white;
+
+    h2 {
+        font-size: $fz-5;
+    }
 }
+
+    .page-header + .page-toc {
+        ol {
+            counter-reset: header-toc;
+
+            list-style: none;
+
+            padding-left: 0;
+        }
+
+        li {
+            counter-increment: header-toc;
+
+            display: inline-block;
+        }
+
+        li:before {
+            content: counter(header-toc) ". ";
+        }
+
+        li:after {
+            content: " – ";
+        }
+
+        li:last-of-type:after {
+            content: "";
+        }
+
+        p {
+            display: none;
+        }
+    }
