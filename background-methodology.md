@@ -23,8 +23,6 @@ This is not a new field of study. Other scholars have considered this broad ques
 * More directly related is the work of Penner et al. (CITEME 2006). Penner et al. developed a coded database of 19,000 questions asked during Question Period in the House of Commons between 1988 and 1999. With this database, they investigated which issues parties spoke to most often, and categorized the nature of those issues as either “generalized” (appealing to the entire electorate) or “particularized” (appealing to some subsection of the electorate). Each question was manually coded according to a set of policy topics drawn from similar research in the United States (1009–1010), such that each question had one topic. The authors note that analysis on such a corpus can only speak directly to the priorities of *opposition* parties, as they ask most of the substantive questions during Question Period (1009). This approach, however, is a useful example for this project, in that it demonstrates that the words spoken in Parliament are valid measures of their speaker’s priorities.
 * Montpetit and Foucault (2012) also examined this question of policy attention. Analyzing speeches from the throne delivered in the United Kingdom, the Canadian federal government, and Canadian provinces, Montpetit and Foucault examined when policy attention changes. Though the specific question they ask is of less relevance, their approach is highly so. Based on existing academic literature, Montpetit and Foucault identified speeches from the throne as a particularly strong corpus for the study of *government* (as opposed to opposition) priorities (643–644). They manually coded each speech, capturing the range of policy issues to which it referred, finding that the distribution of topic issues per speech corresponded to their intuitive sense of the various governments’ priorities (644–647). Montpetit and Foucault’s example is a useful one for this project, as it identifies speeches from the throne as a suitable corpus, and suggests one way to identify the government priorities expressed within that corpus.
 
-* methodological examples, e.g. topic modelling and automatic analysis of LiPaD
-
 From this grounding in existing literature, I decided to analyze speeches from the throne using topic modelling, supplemented with other forms of computerized textual analysis. For a specific question, then, this project investigates the following:
 
 > What does topic modelling on speeches from the throne delivered in the Canadian House of Commons between 1953 and 2015 indicate about the changing public priorities of federal governments?
@@ -44,23 +42,57 @@ The time period in question, 1953–2015, spans 21 Parliaments. 12 of these Parl
 
 ## Method
 
-Topic modelling (MALLET and R)
-Other textual analysis (Voyant) [for final analysis]
+I chose topic modelling as a digital tool with which to analyze this corpus.
 
-[following example of Penner et al. in terms of using words spoken in Parliament and coding topics. however, topics here are *inferred* from the text instead of imposed. also, different scale. also, government instead of opposition (different corpus).]
+Topic modelling uses a computer algorithm (run by a program such as [MALLET](http://mallet.cs.umass.edu/)) to infer statistically significant groups of words that appear in a collection of texts. Graham, Weingart, and Milligan explain the approach clearly in a tutorial at *Programming Historian*:
 
-[one topic works for QP Qs, while multiple topics makes more sense for a lengthier document like a speech from the throne]
+> Topic models represent a family of computer programs that extract topics from texts. A topic to the computer is a list of words that occur in statistically meaningful ways. A text can be an email, a blog post, a book chapter, a journal article, a diary entry – that is, any kind of unstructured text. By unstructured we mean that there are no computer-readable annotations that tell the computer the semantic meaning of the words in the text.
+> 
+> Topic modeling programs do not know anything about the meaning of the words in a text. Instead, they assume that any piece of text is composed (by an author) by selecting words from possible baskets of words where each basket corresponds to a topic. If that is true, then it becomes possible to mathematically decompose a text into the probable baskets from whence the words first came. The tool goes through this process over and over again until it settles on the most likely distribution of words into baskets, which we call topics. (CITEME Graham et al. 2012)
 
-[automatic coding instead of manual]
+For a very practical (and amusing) example of how topic modelling works, “[The LDA Buffet is Now Open; or, Latent Dirichlet Allocation for English Majors](http://www.matthewjockers.net/2011/09/29/the-lda-buffet-is-now-open-or-latent-dirichlet-allocation-for-english-majors/)” (CITEME Jockers 2014) explains the technique well.
+
+Each topic is a list of words with associated weights. The first eight words in [one topic that I generated](/topics/3-olympic-athletes-winter/), for example, are “olympic athletes winter step planning unnecessary stories gold”. Texts are then compared each topic’s list of words weights to see how much of the text is reflected in that topic. The weight of the word determines its importance to the topic—a topic actually contains much more than eight words, but the weight of some is so minimal as to not influence these calculations.
+
+In 2014, Milligan offered an early example of topic modelling for political history. He ran a topic modelling algorithm on the entirety of the Canadian Hansard (the official parliamentary record) between 1994 and 2012, extracting several topics and using them to evaluate a thesis on a shifting narrative surrounding Canada’s portrayal to the outside world (CITEME Milligan 2014).
+
+Topic modelling offers two notable advantages when analyzing speeches from the throne over manual coding:
+
+* It allows for multiple “codes” per speech, as a topic is merely a collection of words—one text can be made up of several topics.
+* Topics are inferred from the content of speeches instead of imposed from the “outside,” allowing us to find potentially significant concepts that may otherwise pass unnoticed with a restricted list of pre-existing topics.
 
 ### Topic modelling considerations
 
+Based on a survey of literature related to topic modelling (CITEME ...TODO...), I identified the following important points to consider in using topic modelling for research:
+
+* Computers do not understand the _meaning_ of texts, so topics do not have any inherent meaning. Rather, the researcher assigns meaning to these topics. Often they do so through a label. Accordingly, I labelled and annotated the most interesting topics. (You can [see the full list](/topics/) or [read my focused analysis](/discussion/).)
+* Most documents in the corpus will be made up of several topics, while some topics may only appear within one document.
+* Researchers must develop a list of stopwords to prevent the topic modeller from incorporating frequently used but “meaningless” words. (“Meaningless” is relative, which is why the researcher must put some thought into the development of this list.)
+* The number of topics must be *chosen* by the researcher. There is no optimal number of topics—as I note below, I varied the number of topics produced by the algorithm until I settled on a number that seemed right. Ultimately, though, the number is a choice.
+* Topic modelling should be used alongside other research methods, such as close reading. Accordingly, when analyzing certain topics I read seemingly notable speeches and turned to [Voyant](https://voyant-tools.org/) for standard textual analysis tools like term and phrase frequency.
+* Topic modelling does not necessarily _prove_ anything about the corpus, but it can offer new interpretations for further research.
+
 ### How I created my model
 
-Process
-1. Load corpus
-[describe?]
-2. Curate list of stopwords
-	[provide stopwords]
-3. Generate topics over and over again  (varying the number, e.g., 10, 15, 25, 30, 40)
-	 [give a sample topic]
+1. I first loaded my corpus (described above) into MALLET.
+
+2. I then curated my list of stopwords. In addition to Voyant’s automatically-generated list (based on common English words), I added the following:
+
+	```
+	government
+	members
+	ministers
+	parliament
+	parliamentary
+	parliamentarians
+	senate
+	house
+	commons
+	speech
+	throne
+	th
+	session
+	```
+	I assembled this list by looking at the most frequent words and removing any that seemed to appear only in “routine” portions of the speeches—namely, the openings and closings.
+
+3. I then generated topics numerous times. I varied the number of topics, comparing the results when I tried to generate 10, 15, 20, 25, 30, 35, or 40 topics. I ultimately settled on [30 topics](/topics/), as I found that this seemed to strike a good balance between having meaningful topics that were also distinct from one another.
