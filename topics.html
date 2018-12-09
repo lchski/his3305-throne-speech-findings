@@ -4,6 +4,41 @@ title: "Topics"
 full_width: true
 ---
 
+<div class="page">
+    <p>
+        This is the full list of thirty topics generated from the corpus. For each, I have included:
+        the automatic “label” for the topic (the top eight words); a plot showing the weights of the
+        top ten words in the topic; and a plot showing the weight of the topic in each of the speeches
+        from the corpus.
+    </p>
+
+    <p>
+       Some points to note in interpreting the plots:
+    </p>
+
+    <ul>
+        <li>
+            <p>
+                The x-axis for the top ten word weights is not consistent from topic to topic, while the
+                y-axis for the topic’s weight in each speech <em>is</em> consistent from topic to topic. The latter
+                thus allows comparing between topics, while the former is presented more for interest’s sake.
+            </p>
+        </li>
+        <li>
+            <p>
+                The bars in the speech plots are colour-coded by the governing party that wrote the speech: red for the Liberals,
+                blue for the Conservatives.
+            </p>
+        </li>
+        <li>
+            <p>
+                At the bottom of many of the speech plots, you’ll see that many of the red or blue dots representing speeches are faded.
+                This means that that topic is not present within that speech.
+            </p>
+        </li>
+    </ul>
+</div>
+
 <ol class="topic-list">
     {% for topic in site.data.topics %}
         {% assign topic_id = topic.id | plus: 0 %}
