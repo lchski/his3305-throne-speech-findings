@@ -5,6 +5,8 @@ full_width: true
 ---
 
 <div class="page">
+    <h2>Overview</h2>
+
     <p>
         This is the full list of thirty topics generated from the corpus. For each, I have included:
         the automatic “label” for the topic (the top eight words); a plot showing the weights of the
@@ -36,6 +38,27 @@ full_width: true
                 This means that that topic is not present within that speech.
             </p>
         </li>
+    </ul>
+
+
+
+    <h2>Annotations</h2>
+
+    <p>
+        I have selected a handful of topics that are notable for one reason or another and written annotations on them (on separate pages,
+        linked next and below each topic in the full list). While going through the full list of topics can be interesting, my analysis is
+        primarily contained within these annotations and within my more focused <a href="/discussion/">discussion of results</a>.
+    </p>
+
+    <p>Here are the topics I annotated:</p>
+
+    <ul>
+        {% assign sorted_topic_annotations = site.topic_annotations | sort: "topic_number_sort" %}
+        {% for topic_annotation in sorted_topic_annotations %}
+            <li>
+                {{ topic_annotation.topic_number }}: <a href="{{ topic_annotation.url }}">{{ topic_annotation.title }}</a>
+            </li>
+        {% endfor %}
     </ul>
 </div>
 
