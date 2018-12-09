@@ -56,7 +56,7 @@ full_width: true
         {% assign sorted_topic_annotations = site.topic_annotations | sort: "topic_number_sort" %}
         {% for topic_annotation in sorted_topic_annotations %}
             <li>
-                {{ topic_annotation.topic_number }}: <a href="{{ topic_annotation.url }}">{{ topic_annotation.title }}</a>
+                #{{ topic_annotation.topic_number }}: <a href="{{ topic_annotation.url }}">{{ topic_annotation.title }}</a>
             </li>
         {% endfor %}
     </ul>
