@@ -31,6 +31,8 @@ Nonetheless, we were able to observe various trends, as noted in [the discussion
 
 This work suggested a variety of paths for future research:
 
+* Further explore each of [the thirty topics identified](/topics/). Given my limited time, I prioritized ten for annotation, but each topic could potentially yield interesting results.
+
 * One of topic modelling’s great features is that one can take the topics generated on one corpus and check them against other corpora, to see whether the topics are equally prevalent. It would be interesting to take the list of issue topics from speeches from the throne and compare them with other political documents, to see whether these priorities are mentioned only within speeches from the throne or whether they indicate a more general historical trend.
 
 * One specific example of this would be to compare [the formality topic]((/topics/24-act-asked-provide/)) with speeches delivered by the governor general outside of Parliament and speeches delivered by the prime minister. 
