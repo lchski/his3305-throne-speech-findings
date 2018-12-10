@@ -9,7 +9,9 @@ My main conclusions about the project’s guiding question are noted in the [dis
 
 ### ...topic modelling?
 
-Topics like [#24](/topics/24-act-asked-provide/) reveal the great potential of topic modelling. Admittedly, it is not a particularly relevant topic to this project’s overall question. But it suggested an entirely new path of research—thanks to topic modelling, I was better able to think through the corpus and understand its possibilities for research.
+Topic modelling is a useful tool to quickly get a sense of a corpus. Some prior knowledge is certainly beneficial to help determine the number of topics and to get a sense of what the topics mean. But for those with little to no knowledge of an historical period, topic modelling can quickly reveal interesting points on which to dive in, such as the [1973 oil crisis](/topics/10-oil-food-transportation/), by identifying major points of discussion at certain times. However, one must be careful not to draw unfounded conclusions: the [various mentions of the Arctic between 2006 and 2015](/topics/18-families-hard-north/), for example, likely had less to do with a particular historical event than with the political interests of the governing party at the time.
+
+Topics like “[declining parliamentary formality](/topics/24-act-asked-provide/)” reveal the great potential of topic modelling as a tool to suggest research opportunities. Admittedly, it is not a particularly relevant topic to this project’s overall question. But it suggested an entirely new path of research—thanks to topic modelling, I was better able to think through the corpus and understand its possibilities for research.
 
 ### ...speeches from the throne?
 
@@ -29,7 +31,7 @@ Nonetheless, we were able to observe various trends, as noted in [the discussion
 
 This work suggested a variety of paths for future research:
 
-* check the formality topic with speeches by the GG outside of Parliament, and by the PM, to get “institutional” and “political” comparisons (topic 24)
-* ability to use these topics on other corpora
-* share the code! reproducibility, etc.
-* 
+* One of topic modelling’s great features is that one can take the topics generated on one corpus and check them against other corpora, to see whether the topics are equally prevalent. It would be interesting to take the list of issue topics from speeches from the throne and compare them with other political documents, to see whether these priorities are mentioned only within speeches from the throne or whether they indicate a more general historical trend.
+* One specific example of this would be to compare [the formality topic]((/topics/24-act-asked-provide/)) with speeches delivered by the governor general outside of Parliament and speeches delivered by the prime minister. This would allow for two additional perspectives: the governor general would provide an “institutional” perspective (What formality does the governor general use when they write their own speeches?) a “political” perspective (Does the formality of political prime ministerial speeches correspond to the shifting formality of speeches from the throne?).
+* Another example would be to compare [the “new government rhetoric” topic](/topics/17-trust-stronger-middle/) with other political documents from both the Harper Conservatives and Trudeau Liberals after their first speech from the throne  (prime ministerial speeches, press releases, etc.), to see whether that language continues to appear or not.
+* Though time did not allow for me to clean up and properly annotate my codebase, I would also like to publish the code I used to generate my models and produce my data. As topic modelling is still relatively rare in historical research, offering a practical example of how I processed my data could be useful to other researchers. (And it would allow anyone interested to pick up the analysis where I left it.)
