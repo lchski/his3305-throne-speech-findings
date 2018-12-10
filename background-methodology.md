@@ -20,7 +20,9 @@ This question implies a few different sub-questions:
 This is not a new field of study. Other scholars have considered this broad question from different angles, using a variety of methods:
 
 * Though not focused explicitly on the study of political parties, Nevitte (CITEME 1996) considered the changing values of Canadians, political and otherwise, between 1981 and 1990. Nevitte’s study drew on the World Values Survey, an extensive public opinion project, based on the premise that “the best way to find out about people’s values is to ask them” (20). This statistical analysis of survey data was able to demonstrate trends over time in popular opinion on numerous questions of values. While not directly related to this project’s question, such an approach can offer an interesting proxy into what political parties might prioritize, as parties must ultimately be responsive to popular opinion.
+
 * More directly related is the work of Penner et al. (CITEME 2006). Penner et al. developed a coded database of 19,000 questions asked during Question Period in the House of Commons between 1988 and 1999. With this database, they investigated which issues parties spoke to most often, and categorized the nature of those issues as either “generalized” (appealing to the entire electorate) or “particularized” (appealing to some subsection of the electorate). Each question was manually coded according to a set of policy topics drawn from similar research in the United States (1009–1010), such that each question had one topic. The authors note that analysis on such a corpus can only speak directly to the priorities of *opposition* parties, as they ask most of the substantive questions during Question Period (1009). This approach, however, is a useful example for this project, in that it demonstrates that the words spoken in Parliament are valid measures of their speaker’s priorities.
+
 * Montpetit and Foucault (CITEME 2012) also examined this question of policy attention. Analyzing speeches from the throne delivered in the United Kingdom, the Canadian federal government, and Canadian provinces, Montpetit and Foucault examined when policy attention changes. Though the specific question they ask is of less relevance, their approach is highly so. Based on existing academic literature, Montpetit and Foucault identified speeches from the throne as a particularly strong corpus for the study of *government* (as opposed to opposition) priorities (643–644). They manually coded each speech, capturing the range of policy issues to which it referred, finding that the distribution of topic issues per speech corresponded to their intuitive sense of the various governments’ priorities (644–647). Montpetit and Foucault’s example is a useful one for this project, as it identifies speeches from the throne as a suitable corpus, and suggests one way to identify the government priorities expressed within that corpus.
 
 From this grounding in existing literature, I decided to analyze speeches from the throne using topic modelling, supplemented with other forms of computerized textual analysis. For a specific question, then, this project investigates the following:
@@ -32,6 +34,7 @@ From this grounding in existing literature, I decided to analyze speeches from t
 Speeches from the throne are a strong corpus for studying the public priorities of governing parties. They have several advantages:
 
 * They are delivered regularly. At the start of each parliamentary session (which occur at least once during each Parliament, though most governments have opted to split their Parliament up into multiple sessions), the governing party prepares the speech, which is delivered by the Queen or her representative, the governor general (CITEME Cochrane, Blidook, and Dyck 2017, 573). This regularity means that there is data available for each government during this period.
+
 * They have a relatively standardized form. Speeches from the throne outline government priorities, and have the unique advantage of describing policy issues that may be acted on through either legislative or budgetary measures (CITEME Montpetit and Foucault 2012, 644). This means that speeches from the throne can offer a more comprehensive overview of a government’s priorities than can be obtained through studying either legislation or budgets alone.
 
 Admittedly, speeches from the throne are not a perfect corpus. There may be issues on which a government is intensely focused during a parliamentary session that, for whatever reason, it does not mention in its speech from the throne. Accordingly, I can draw conclusions only on the public priorities stated by governments during their speeches from the throne. I do not mean to imply that these are a government’s *only* priorities.
@@ -59,6 +62,7 @@ Topic modelling has been put to some use in historical research. Perhaps the bes
 Topic modelling offers two notable advantages when analyzing speeches from the throne over manual coding:
 
 * It allows for multiple “codes” per speech, as a topic is merely a collection of words—one text can be made up of several topics.
+
 * Topics are inferred from the content of speeches instead of imposed from the “outside,” allowing us to find potentially significant concepts that may otherwise pass unnoticed with a restricted list of pre-existing topics.
 
 ### Topic modelling considerations
@@ -66,10 +70,15 @@ Topic modelling offers two notable advantages when analyzing speeches from the t
 Based on a survey of literature related to topic modelling (CITEME ...TODO...), I identified the following important points to consider in using topic modelling for research:
 
 * Computers do not understand the _meaning_ of texts, so topics do not have any inherent meaning. Rather, the researcher assigns meaning to these topics. Often they do so through a label. Accordingly, I labelled and annotated the most interesting topics. (You can [see the full list](/topics/) or [read my focused analysis](/discussion/).)
+
 * Most documents in the corpus will be made up of several topics, while some topics may only appear within one document.
+
 * Researchers must develop a list of stopwords to prevent the topic modeller from incorporating frequently used but “meaningless” words. (“Meaningless” is relative, which is why the researcher must put some thought into the development of this list.)
+
 * The number of topics must be *chosen* by the researcher. There is no optimal number of topics—as I note below, I varied the number of topics produced by the algorithm until I settled on a number that seemed right. Ultimately, though, the number is a choice.
+
 * Topic modelling should be used alongside other research methods, such as close reading. Accordingly, when analyzing certain topics I read seemingly notable speeches and turned to [Voyant](https://voyant-tools.org/) for standard textual analysis tools like term and phrase frequency.
+
 * Topic modelling does not necessarily _prove_ anything about the corpus, but it can offer new interpretations for further research.
 
 ### How I created my model
