@@ -3,6 +3,11 @@ layout: page
 title: Bibliography
 ---
 
-TODO
-
-"The Canadian Political Culture" in _Canadian Politics: Critical Approaches_ ?
+<ol class="reference-list">
+    {% assign sorted_references = site.data.references | sort: "id" %}
+    {% for reference in sorted_references %}
+        <li id="ref-{{ reference.id }}">
+            {{ reference.citation | markdownify }}
+        </li>
+    {% endfor %}
+</ol>
