@@ -3,6 +3,8 @@ layout: page
 title: Background and methodology
 ---
 
+## Overview and scholarly context
+
 I am interested in understanding the publicly stated priorities of Canadian governments. This project is guided by the following overall question:
 
 > How have the governments of different Canadian political parties described their priorities over the past 65 years?

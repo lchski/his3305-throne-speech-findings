@@ -3,7 +3,7 @@ layout: page
 title: Conclusions, project implications, next steps
 ---
 
-My main conclusions about the project’s guiding question are noted in the [discussion section](/discussion/#trends-in-public-priorities). Here, I explore what the project taught me about using topic modelling, about speeches from the throne as a corpus, and about the combination of the two for the study of government priorities. I also expand on some potential next steps.
+My main conclusions about the project’s guiding question are noted in the [discussion section](/discussion/). Here, I explore what the project taught me about using topic modelling, about speeches from the throne as a corpus, and about the combination of the two for the study of government priorities. I also expand on some potential next steps.
 
 ## What can we learn about...
 
