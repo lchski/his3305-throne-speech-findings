@@ -6,4 +6,25 @@
 
     .reference-list li {
         text-indent: -2rem;
+
+        padding-left: 0;
     }
+
+blockquote {
+    border-left: 0.5rem solid rgba($purple-light, 0.5);
+
+    margin-left: 0;
+
+    padding-left: 2rem;
+
+    font-style: italic;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+ol li,
+ul li {
+    padding-left: 0.5rem;
+}

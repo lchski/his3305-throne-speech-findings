@@ -14,6 +14,15 @@
     }
 }
 
+    .page-header a {
+        color: $yellow;
+
+        margin-right: 1rem;
+    }
+        .page-header a:hover {
+            text-decoration-style: double;
+        }
+
     .project-title {
         color: $yellow;
 
@@ -24,6 +33,16 @@
         line-height: 1;
 
         margin: 0;
+
+        a {
+            text-decoration: none;
+
+            margin-right: 0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
     .project-subtitle {
@@ -33,12 +52,3 @@
 
         margin-top: 1rem;
     }
-
-    .page-header a {
-        color: $yellow;
-
-        margin-right: 1rem;
-    }
-        .page-header a:hover {
-            text-decoration-style: double;
-        }

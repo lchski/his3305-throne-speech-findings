@@ -1,9 +1,9 @@
 <header class="page-header">
     {% case page.url %}
         {% when '/' %}
-            <h1 class="project-title">{{ site.title }}</h1>
+            <h1 class="project-title"><a href="/">{{ site.title }}</a></h1>
         {% else %}
-            <p class="project-title">{{ site.title }}</p>
+            <p class="project-title"><a href="/">{{ site.title }}</a></p>
     {% endcase %}
 
     <p class="project-subtitle">{{ site.subtitle }}</p>
