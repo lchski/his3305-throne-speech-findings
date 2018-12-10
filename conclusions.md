@@ -23,7 +23,7 @@ That said, the topic modeller would have been more effective with a larger corpu
 
 Ultimately, the topics generated did not surface too many “issue” topics. Given the constraints of topic modelling, noted above, this is not necessarily a surprise.
 
-The approach taken by Montpetit and Foucault (CITEME 2012), tagging portions of sentences with specific policy issues, would be more effective at exhaustively identifying the priorities discussed by governments in speeches from the throne. However, such an approach may not have yielded the alternative conclusions suggested by topic modelling, and it would have taken far more time.
+The approach taken by Montpetit and Foucault ([2012](/references/#ref-montpetit-foucault-2012)), tagging portions of sentences with specific policy issues, would be more effective at exhaustively identifying the priorities discussed by governments in speeches from the throne. However, such an approach may not have yielded the alternative conclusions suggested by topic modelling, and it would have taken far more time.
 
 Nonetheless, we were able to observe various trends, as noted in [the discussion section](/discussion/). While this corpus and tool could not provide an extremely detailed portrait of such trends, it was certainly able to point to some shifts.
 
