@@ -4,7 +4,7 @@ layout: page
 
 # Project site overview
 
-This is the project site for *Who said what, when?*. Originally prepared to document
+This is the project site for *Who discussed what, when?*. Originally prepared to document
 research conducted for course HIS3305 at the University of Ottawa (supervised by Chad
 Gaffield), this site explains my research into what speeches from the throne indicate
 about shifting government priorities between 1953 and 2015.
